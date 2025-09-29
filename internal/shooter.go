@@ -3,13 +3,14 @@ package internal
 import (
 	"context"
 	"fmt"
-	"gitlab.mvk.com/go/vkgo/projects/donut/shooter/internal/action"
 	"log"
 	"os"
 	"os/signal"
 	"sync"
 	"syscall"
 	"time"
+
+	"gitlab.mvk.com/go/vkgo/projects/donut/shooter/internal/action"
 )
 
 type Shooter struct {

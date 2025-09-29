@@ -40,6 +40,14 @@ func (s *Stats) Merge(other Stats) {
 	atomic.AddUint64(&s.Fail, other.Fail)
 }
 
+func (s *Stats) RecordSuccess() {
+	atomic.AddUint64(&s.Success, 1)
+}
+
+func (s *Stats) RecordFailure() {
+	atomic.AddUint64(&s.Fail, 1)
+}
+
 func printInner(statName string, p1 uint64, p2 uint64, period time.Duration) {
 	requests := float64(p1 + p2)
 	rps := requests / period.Seconds()

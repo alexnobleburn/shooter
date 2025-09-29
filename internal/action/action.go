@@ -1,8 +1,9 @@
 package action
 
 import (
-	"gitlab.mvk.com/go/vkgo/projects/donut/shooter/internal/stats"
 	"time"
+
+	"gitlab.mvk.com/go/vkgo/projects/donut/shooter/internal/stats"
 )
 
 type Action interface {
